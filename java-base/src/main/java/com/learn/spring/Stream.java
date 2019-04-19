@@ -24,6 +24,14 @@ public class Stream {
         排序();
 
         统计();
+
+        合并();
+    }
+
+    private static void 合并() {
+        List<Obj> list = getList("b","a");
+        String str = list.stream().map(Obj::getName).collect(Collectors.joining(","));
+        System.out.println(str);
     }
 
     public static void 排序(){
